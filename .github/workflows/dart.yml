@@ -11,6 +11,9 @@ jobs:
       - uses: actions/checkout@v1
       - name: Install Flutter
         uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "2.15.0-178.1.beta"
+          channel: "beta"
       - name: Install app dependencies
         run: flutter pub get
       - name: Test app

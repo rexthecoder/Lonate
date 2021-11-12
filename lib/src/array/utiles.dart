@@ -24,9 +24,6 @@ List baseFill(array, value, start, end) {
   var length = array.length;
   start = start.toInt();
 
-  if (start < 0) {
-    start = -start > length ? 0 : (length + start);
-  }
   end = (end == null || end > length) ? length : end.toInt();
   if (end < 0) {
     end += length;

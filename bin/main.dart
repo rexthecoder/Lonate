@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:lonate/lonate.dart';
 
 void main() {
@@ -22,4 +23,6 @@ void main() {
   var mic = multipleComputation((x, y, a) {
     return [x, y, a];
   }, [square, doubled, square], [9]);
+
+  debugPrint(mic);
 }

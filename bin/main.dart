@@ -2,16 +2,18 @@ import 'package:flutter/foundation.dart';
 import 'package:lonate/lonate.dart';
 
 void main() {
-  // var clumsysquare = memoize((int x) {
-  //   var result = 0;
-  //   for (var i = 1; i <= x; i++) {
-  //     for (var j = 1; j <= x; j++) {
-  //       result++;
-  //     }
-  //   }
-  //   return result;
-  // }, [20]);
+  // Function to memorize state
+  var clumsysquare = memoize((int x) {
+    var result = 0;
+    for (var i = 1; i <= x; i++) {
+      for (var j = 1; j <= x; j++) {
+        result++;
+      }
+    }
+    return result;
+  }, [20]);
 
+  debugPrint(clumsysquare());
   int doubled(n) {
     return n * 2;
   }

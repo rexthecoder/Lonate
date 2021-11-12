@@ -56,12 +56,6 @@ extension ArrayIndexing<T> on List<T> {
   /// [findIndex] Returns the index of the first element predicate returns truthy for.
   /// @param [predicate] the function to determine equality
   int findIndex(Function predicate) => array.findIndex(this, predicate);
-
-  /// [lastIndexOf] Returns the index of the last element predicate returns truthy for.
-  /// @param [values] the list to compare against
-  /// @param [fromIndex] the start index
-  int lastIndexOf(List values, [int? fromIndex]) =>
-      array.lastIndexOf(this, values, fromIndex);
 }
 
 extension ArrayFlatten<T> on List<T> {

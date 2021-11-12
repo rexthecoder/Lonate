@@ -37,29 +37,3 @@ List baseFill(array, value, start, end) {
   }
   return array;
 }
-
-int toLength(value) {
-  return value ? baseClamp(value.toInt(), 0, MAX_ARRAY_LENGTH) : 0;
-}
-
-int baseClamp(number, lower, upper) {
-  if (number == number) {
-    if (upper.isNotEmpty) {
-      number = number <= upper ? number : upper;
-    }
-    if (lower.isNotEmpty) {
-      number = number >= lower ? number : lower;
-    }
-  }
-  return number;
-}
-
-mapCache(entries) {
-  var index = -1, length = entries == null ? 0 : entries.length;
-
-  entries.clear();
-  while (++index < length) {
-    var entry = entries[index];
-    entries.set(entry[0], entry[1]);
-  }
-}

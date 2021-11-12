@@ -1,6 +1,3 @@
-import 'dart:math' as math;
-
-import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:lonate/lonate.dart';
@@ -20,34 +17,7 @@ void main() {
     final diffBy = differenceBy([2.1, 1.2], [2.1, 3.4], (a) => a);
     final dr = drop([1, 2, 3], 0);
     final dropR = dropRight([1, 2, 3]);
-    final finddex = findIndex(users, (o) {
-      return o['user'] == 'barney';
-    });
 
-    final flat = flatten([
-      1,
-      [
-        2,
-        [
-          3,
-          [4]
-        ],
-        5
-      ]
-    ]);
-    final flatDeep = flattenDeep([
-      1,
-      [
-        2,
-        [
-          3,
-          [4]
-        ],
-        5
-      ]
-    ]);
-    //final droWhile = dropWhile(users, (n) => n['active']);
-    final fillArray = fill([1, 2, 3], 'a');
     final flatDepth = flattenDepth([
       1,
       [
@@ -61,16 +31,6 @@ void main() {
     ], 1);
 
     expect(flatDepth, [
-      1,
-      2,
-      [
-        3,
-        [4]
-      ],
-      5
-    ]);
-    expect(flatDeep, [1, 2, 3, 4, 5]);
-    expect(flat, [
       1,
       2,
       [

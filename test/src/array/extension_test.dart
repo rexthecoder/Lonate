@@ -198,14 +198,6 @@ void main() {
       expect(actualResult, expectedResult);
     });
 
-    test('should return the last index of the list when valid List is passed',
-        () {
-      int expectedResult = 3;
-      int actualResult = [1, 2, 1, 2, 3].lastIndexOf(2);
-
-      expect(actualResult, expectedResult);
-    });
-
     test('should return all removes given values from the list passed', () {
       List expectedResult = [3, 4, 5, 6];
       List actualResult = [1, 2, 3, 4, 5, 6].pull([1, 2]);

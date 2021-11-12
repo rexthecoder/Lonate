@@ -123,10 +123,6 @@ extension ArraySorted<T> on List<T> {
 }
 
 extension ArrayUnion<T> on List<T> {
-  /// [union] Creates an array of unique values, in order, from all given arrays
-  /// @param [values] the list to compare against
-  List union(List values) => array.union(this, values);
-
   /// [unionBy] Creates an array of unique values, in order, from all given arrays
   /// @param [values] the list to compare against
   /// @param [iteratee] the function to determine equality

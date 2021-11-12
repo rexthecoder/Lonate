@@ -7,9 +7,9 @@ name: Dart
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
@@ -17,6 +17,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: 2.15.0-178.1.beta
 
       # Note: This workflow uses the latest stable version of the Dart SDK.
       # You can specify other versions if desired, see documentation here:
@@ -25,7 +28,7 @@ jobs:
       - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
         with:
           sdk: 2.15.0-178.1.beta
-          
+
       - name: Install dependencies
         run: dart pub get
 

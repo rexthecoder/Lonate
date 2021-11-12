@@ -1,11 +1,11 @@
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/) 
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php) 
-[![likes](https://lonate/lonate/likes)](https://pub.dev/packages/badges_bar/score) [![popularity](https://lonate/lonate/popularity)](https://pub.dev/packages/badges_bar/score) [![pub points](https://lonate/lonate/pub%20points)](https://pub.dev/packages/badges_bar/score)
+
+[![Pub release](https://img.shields.io/pub/v/lonate.svg?style=flat-square)](https://pub.dev/packages/lonate)
+[![Likes](https://badges.bar/lonate/likes)](https://pub.dev/packages/lonate/score) [![Popularity](https://badges.bar/lonate/popularity)](https://pub.dev/packages/lonate/score)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://opensource.org/licenses/Apache-2.0)
 
 ![UX](https://user-images.githubusercontent.com/36260221/141528867-f9ee0e1f-248f-4ef3-bb3c-d2f3cba5a9c9.png)
 
-
-A super effective Dart and Flutter library delivering performance🌝 & ensuring greater build speed 🚀. The package has some cook utilizes which is ready to be serve in your app.💙
+A super effective Dart and Flutter library for delivering performante app🌝 & ensuring greater build speed 🚀. The package has some cook utilizes which is ready to be serve in your app.💙
 
 ## Getting started
 
@@ -57,6 +57,8 @@ void main() {
 }
 
 ```
+
+Check the [api documentation](https://pub.dev/documentation/lonate/latest/) for more information
 
 ## Contributing
 

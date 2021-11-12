@@ -12,6 +12,7 @@ jobs:
       - name: Install Flutter
         uses: subosito/flutter-action@v1
         with:
+          sdk: "2.15.0-178.1.beta"
           flutter-version: "1.17.0"
           channel: "beta"
       - name: Install app dependencies

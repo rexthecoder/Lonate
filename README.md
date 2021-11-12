@@ -1,4 +1,5 @@
-[![build](https://github.com/Rexfordasamoah51/Lonate/workflows/build/badge.svg?branch=main)](https://github.com/bruno-garcia/badges.bar/actions?query=branch%3Amain)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/) 
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php) 
 [![likes](https://lonate/lonate/likes)](https://pub.dev/packages/badges_bar/score) [![popularity](https://lonate/lonate/popularity)](https://pub.dev/packages/badges_bar/score) [![pub points](https://lonate/lonate/pub%20points)](https://pub.dev/packages/badges_bar/score)
 
 ![UX](https://user-images.githubusercontent.com/36260221/141528867-f9ee0e1f-248f-4ef3-bb3c-d2f3cba5a9c9.png)

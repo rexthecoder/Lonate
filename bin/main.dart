@@ -22,8 +22,4 @@ void main() {
   var mic = multipleComputation((x, y, a) {
     return [x, y, a];
   }, [square, doubled, square], [9]);
-
-  print(isGreater(20, 20));
-  print(add(20.0, 10.0));
-  print(ceil(4.006));
 }

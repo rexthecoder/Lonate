@@ -33,7 +33,7 @@ List difference(List array, List values) {
 }
 
 ///This method is like _.difference except that it accepts iteratee which is invoked
-///for each eleme a nt of array and values to generate the criterion by which they're compared.
+///for each element nt of array and values to generate the criterion by which they're compared.
 ///The order and references of result values are determined by the first array.
 /// The iteratee is invoked with one argument:
 List differenceBy(List array, List values, Function iteratee) {

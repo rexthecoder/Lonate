@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:lonate/lonate.dart';
 
 void main() {
@@ -13,7 +12,7 @@ void main() {
     return result;
   }, [20]);
 
-  debugPrint(clumsysquare());
+  print(clumsysquare());
   int doubled(n) {
     return n * 2;
   }
@@ -26,5 +25,5 @@ void main() {
     return [x, y, a];
   }, [square, doubled, square], [9]);
 
-  debugPrint(mic);
+  print(mic);
 }

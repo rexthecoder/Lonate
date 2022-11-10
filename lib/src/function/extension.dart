@@ -10,9 +10,6 @@ extension RichFunction on Function {
   /// Invokes func after wait milliseconds. Any additional arguments
   void isDelay(int ms, List args) => delay(ms, this, args);
 
-  /// Creates a function that memoizes the result of func.
-  /// The memoized function can be provided to other functions to avoid invoking func again.
-  Function isMemoize([List? args]) => memoize(this, args);
 
   /// Function to compute multiple functions in parallel using the same args
   dynamic isMultipleComputation([List<Function>? computors, List? args]) =>

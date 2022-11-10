@@ -1,18 +1,8 @@
 import 'package:lonate/lonate.dart';
 
 void main() {
-  // Function to memorize state
-  var clumsysquare = memoize((int x) {
-    var result = 0;
-    for (var i = 1; i <= x; i++) {
-      for (var j = 1; j <= x; j++) {
-        result++;
-      }
-    }
-    return result;
-  }, [20]);
 
-  print(clumsysquare());
+
   int doubled(n) {
     return n * 2;
   }

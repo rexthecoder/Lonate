@@ -26,23 +26,7 @@ void delay(int ms, Function target, List arguments) {
   });
 }
 
-/// Creates a function that memoizes the result of func.
-Function memoize(Function func, [List? args]) {
-  // a cache of results
-  var results = {};
-  // return a function for the cache of results
-  return () {
-    // a String key to save the results cache
-    var argsKey = args?[0].toString() ?? '0';
-    // execute `func` only if there is no cached value of clumsysquare()
-    if (results[argsKey] == null) {
-      // store the return value of clumsysquare()
-      results[argsKey] = Function.apply(func, args);
-    }
-    // return the cached results
-    return results[argsKey];
-  };
-}
+
 
 /// Function to compute multiple functions in parallel using the same args
 /// returns the result as one function

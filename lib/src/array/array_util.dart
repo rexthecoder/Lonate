@@ -40,6 +40,8 @@ List differenceBy(List array, List values, Function iteratee) {
   return array.where((element) => !values.contains(iteratee(element))).toList();
 }
 
+
+
 // Creates a slice of array with n elements dropped from the beginning.
 List drop(List array, [int n = 1]) {
   return array.skip(n).toList();
@@ -76,6 +78,19 @@ int findIndex(List array, Function predicate) {
   }
   return -1;
 }
+
+/// Find last index
+/// Returns the index of the found element, else -1.
+int findLastIndex(List array, Function predicate) {
+  for (var i = array.length - 1; i >= 0; i--) {
+    if (predicate(array[i])) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+
 
 /// Flattens array a single level deep.
 List flatten(List array) {
@@ -119,6 +134,16 @@ Map fromPairs(List pairs) {
 List initial(List array) {
   return array.take(array.length - 1).toList();
 }
+
+/// Gets the element at index n of array. If n is negative, the nth element from the end is returned.
+int nth(List array, int n) {
+  if (n < 0) {
+    return array[array.length + n];
+  }
+  return array[n];
+}
+
+
 
 /// Creates an array of unique values that are included in all given arrays
 ///  The order and references of result values are determined by the first array.
@@ -261,3 +286,11 @@ List zip(List firstArray, List secondArray, List values) {
 List withOut(List array, List values) {
   return array.where((element) => !values.contains(element)).toList();
 }
+
+
+/// Creates an array of unique values that is the symmetric difference of the given arrays.
+/// The order of result values is determined by the order they occur in the arrays.
+List xor(List array, List values) {
+  return array.toSet().difference(values.toSet()).toList();
+}
+

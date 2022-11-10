@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+import 'dart:math';
 
 /// Performs a SameValueZero comparison between two values to determine if they are equivalent.
 bool isEqual(a, b) {
@@ -253,4 +254,132 @@ List values(dynamic object) {
     return object.map((e) => e).toList();
   }
   return [];
+}
+
+/// Creates an object composed of keys generated from the results of running each
+/// element of collection thru iteratee. The corresponding value of each key is 
+/// the number of times the key was returned by iteratee. 
+/// The iteratee is invoked with one argument: (value).
+
+Map countBy(List<dynamic> list, Function iteratee) {
+  var result = <dynamic, int>{};
+  for (var i = 0; i < list.length; i++) {
+    var key = iteratee(list[i]);
+    if (result.containsKey(key)) {
+      result[key] = result[key]! + 1;
+    } else {
+      result[key] = 1;
+    }
+  }
+  return result;
+}
+
+
+/// This method is like _.forEach except that it iterates over elements of collection from right to left.
+void forEachRight(List<dynamic> list, Function iteratee) {
+  for (var i = list.length - 1; i >= 0; i--) {
+    iteratee(list[i]);
+  }
+}
+
+/// eates an object composed of keys generated from the results 
+/// of running each element of collection thru iteratee.
+///  The order of grouped values is determined by the order they occur in collection. 
+/// The corresponding value of each key is an array of 
+/// elements responsible for generating the key. The iteratee is invoked with one argument: (value).
+Map groupBy(List<dynamic> list, Function iteratee) {
+  var result = <dynamic, List<dynamic>>{};
+  for (var i = 0; i < list.length; i++) {
+    var key = iteratee(list[i]);
+    if (result.containsKey(key)) {
+      result[key]!.add(list[i]);
+    } else {
+      result[key] = [list[i]];
+    }
+  }
+  return result;
+}
+
+/// Checks if predicate returns truthy for all elements of collection. 
+/// Iteration is stopped once predicate returns falsey
+/// The predicate is invoked with three arguments: (value, index|key, collection).
+bool every(List<dynamic> list, Function predicate) {
+  for (var i = 0; i < list.length; i++) {
+    if (!predicate(list[i])) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/// Iterates over elements of collection, returning 
+/// an array of all elements predicate returns truthy for.
+///  The predicate is invoked with three arguments: (value, index|key, collection).
+List filter(List<dynamic> list, Function predicate) {
+  var result = <dynamic>[];
+  for (var i = 0; i < list.length; i++) {
+    if (predicate(list[i])) {
+      result.add(list[i]);
+    }
+  }
+  return result;
+}
+
+/// Creates an array of elements, sorted in ascending order by the results of running each element in a collection thru each iteratee. This method performs a stable sort, that is, it preserves the original sort order of equal elements. The iteratees are invoked with one argument: (value).
+List sortBy(List<dynamic> list, Function iteratee) {
+  var result = List.from(list);
+  result.sort((a, b) {
+    var a1 = iteratee(a);
+    var b1 = iteratee(b);
+    if (a1 is num && b1 is num) {
+      return a1.compareTo(b1);
+    }
+    if (a1 is String && b1 is String) {
+      return a1.compareTo(b1);
+    }
+    return 0;
+  });
+  return result;
+}
+
+///This method is like _.sortBy except that it allows specifying the sort orders of the iteratees to sort by. If orders is unspecified, all values are sorted in ascending order. Otherwise, specify an order of "desc" for descending or "asc" for ascending sort order of corresponding values.
+List orderBy(List<dynamic> list, List<Function> iteratees, List<String> orders) {
+  var result = List.from(list);
+  result.sort((a, b) {
+    for (var i = 0; i < iteratees.length; i++) {
+      var a1 = iteratees[i](a);
+      var b1 = iteratees[i](b);
+      if (a1 is num && b1 is num) {
+        if (a1 > b1) {
+          return orders[i] == 'desc' ? -1 : 1;
+        }
+        if (a1 < b1) {
+          return orders[i] == 'desc' ? 1 : -1;
+        }
+      }
+      if (a1 is String && b1 is String) {
+        if (a1.compareTo(b1) > 0) {
+          return orders[i] == 'desc' ? -1 : 1;
+        }
+        if (a1.compareTo(b1) < 0) {
+          return orders[i] == 'desc' ? 1 : -1;
+        }
+      }
+    }
+    return 0;
+  });
+  return result;
+}
+
+
+/// Creates an array of shuffled values, using a version of the Fisher-Yates shuffle.
+List shuffle(List<dynamic> list) {
+  var result = List.from(list);
+  for (var i = result.length - 1; i > 0; i--) {
+    var j = Random().nextInt(i + 1);
+    var temp = result[i];
+    result[i] = result[j];
+    result[j] = temp;
+  }
+  return result;
 }
